@@ -22,3 +22,11 @@ const user1: UserData<string, number> = {
     name: 'Subhajyoti',
     age: 25
 }
+
+function getSearchProducts<T>(products: T[]) : T {
+    return products[0];
+}
+
+const getMoreSearchProducts = <T> (products: T[]) : T => {
+    return products[0];
+}
