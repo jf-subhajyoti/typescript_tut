@@ -30,3 +30,36 @@ function getSearchProducts<T>(products: T[]) : T {
 const getMoreSearchProducts = <T> (products: T[]) : T => {
     return products[0];
 }
+
+interface Database {
+    connection: string,
+    password: string,
+    username: string
+}
+
+function getProperty<T, U extends Database>(valOne: T, valTwo: U) : object {
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+
+interface Quiz {
+    name: string,
+    type: string
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string,
+}
+
+class Sellable<T> {
+    public cart: T[] = [];
+
+    addToCart(product: T) {
+        this.cart.push(product)
+    }
+}
